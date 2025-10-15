@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Client Questionnaire Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+            display: none;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class='form-container'>
+        <h2>Client Questionnaire Form</h2>
+        <form id='questionnaireForm'>
+            <div class='question' id='q1'>
+                <label>Select one:</label>
+                <div class='options'>
+                    <input type='radio' name='clientType' value='New Client'> New Client<br>
+                    <input type='radio' name='clientType' value='Existing Client with New Line of Business'> Existing Client with New Line of Business<br>
+                    <input type='radio' name='clientType' value='Existing Client being Reactivated (Inactive)'> Existing Client being Reactivated (Inactive)<br>
+                    <input type='radio' name='clientType' value='New Business being received from another Subsidiary'> New Business being received from another Subsidiary
+                </div>
+            </div>
+
+            <div class='question' id='q2'>
+                <label>Select all the business units involved:</label>
+                <div class='options'>
+                    <input type='checkbox' name='businessUnits' value='Accident and Health'> Accident and Health<br>
+                    <input type='checkbox' name='businessUnits' value='AIS'> AIS<br>
+                    <input type='checkbox' name='businessUnits' value='Broadspire'> Broadspire<br>
+                    <input type='checkbox' name='businessUnits' value='Broadspire Medical Case Management'> Broadspire Medical Case Management<br>
+                    <input type='checkbox' name='businessUnits' value='Claims Alert Call Center'> Claims Alert Call Center<br>
+                    <input type='checkbox' name='businessUnits' value='Digital Desk'> Digital Desk<br>
+                    <input type='checkbox' name='businessUnits' value='CFAS'> CFAS<br>
+                    <input type='checkbox' name='businessUnits' value='Edjuster'> Edjuster<br>
+                    <input type='checkbox' name='businessUnits' value='GTS'> GTS<br>
+                    <input type='checkbox' name='businessUnits' value='Praxis'> Praxis<br>
+                    <input type='checkbox' name='businessUnits' value='WeGoLook'> WeGoLook
+                </div>
+            </div>
+
+            <div class='question' id='q3'>
+                <label>What type of client is it?</label>
+                <div class='options'>
+                    <input type='radio' name='clientCategory' value='Insurance Company'> Insurance Company<br>
+                    <input type='radio' name='clientCategory' value='Captive Insurance'> Captive Insurance<br>
+                    <input type='radio' name='clientCategory' value='Captive Insurer'> Captive Insurer<br>
+                    <input type='radio' name='clientCategory' value='Risk Pool'> Risk Pool<br>
+                    <input type='radio' name='clientCategory' value='London Syndicate'> London Syndicate<br>
+                    <input type='radio' name='clientCategory' value='MGA'> MGA<br>
+                    <input type='radio' name='clientCategory' value='Corporate'> Corporate<br>
+                    <input type='radio' name='clientCategory' value='Lawfirm'> Lawfirm<br>
+                    <input type='radio' name='clientCategory' value='TPA'> TPA<br>
+                    <input type='radio' name='clientCategory' value='Broadspire'> Broadspire
+                </div>
+            </div>
+
+            <div class='question' id='q4'>
+                <label>Please provide client details:</label>
+                <input type='text' name='clientName' placeholder='Client Name'><br><br>
+                <input type='text' name='contactName' placeholder='Contact Name'><br><br>
+                <input type='tel' name='phoneNumber' placeholder='Phone Number'><br><br>
+                <input type='email' name='email' placeholder='Email'><br><br>
+                <textarea name='address' placeholder='Address'></textarea>
+            </div>
+
+            <div class='question' id='q5'>
+                <label>Select the business line involved:</label>
+                <div class='options'>
+                    <input type='checkbox' name='businessLine' value='1st Party Commercial Auto'> 1st Party Commercial Auto<br>
+                    <input type='checkbox' name='businessLine' value='1st Party Personal Lines Auto'> 1st Party Personal Lines Auto<br>
+                    <input type='checkbox' name='businessLine' value='Agriculture'> Agriculture<br>
+                    <input type='checkbox' name='businessLine' value='Aviation'> Aviation<br>
+                    <input type='checkbox' name='businessLine' value='Business Personal Property'> Business Personal Property<br>
+                    <input type='checkbox' name='businessLine' value='Class Action'> Class Action<br>
+                    <input type='checkbox' name='businessLine' value='Commercial Auto Liability'> Commercial Auto Liability<br>
+                    <input type='checkbox' name='businessLine' value='Commercial General Liability'> Commercial General Liability<br>
+                    <input type='checkbox' name='businessLine' value='Contents'> Contents<br>
+                    <input type='checkbox' name='businessLine' value='Environmental'> Environmental<br>
+                    <input type='checkbox' name='businessLine' value='Inland Marine'> Inland Marine<br>
+                    <input type='checkbox' name='businessLine' value='Product Liability'> Product Liability<br>
+                    <input type='checkbox' name='businessLine' value='Product Recall'> Product Recall<br>
+                    <input type='checkbox' name='businessLine' value='Subrogation'> Subrogation<br>
+                    <input type='checkbox' name='businessLine' value='Workers' Compensation'> Workers' Compensation<br>
+                    <input type='checkbox' name='businessLine' value='Other'> Other
+                </div>
+            </div>
+
+            <div class='question' id='q6'>
+                <label>Which Claim Account will be used to service this Account?</label>
+                <div class='options'>
+                    <input type='radio' name='claimAccount' value='AIS'> AIS<br>
+                    <input type='radio' name='claimAccount' value='CMS'> CMS<br>
+                    <input type='radio' name='claimAccount' value='Client Claim System'> Client Claim System<br>
+                    <input type='radio' name='claimAccount' value='Broadspire RMA'> Broadspire RMA
+                </div>
+            </div>
+
+            <div class='question' id='q7'>
+                <label>Will we provide the Client’s FNOL services?</label>
+                <div class='options'>
+                    <input type='radio' name='fnolService' value='Yes'> Yes<br>
+                    <input type='radio' name='fnolService' value='No'> No
+                </div>
+            </div>
+
+            <div class='question' id='q8'>
+                <label>How will Claims (FNOL) be reported?</label>
+                <div class='options'>
+                    <input type='checkbox' name='fnolMethod' value='Email to branch office or designated adjuster'> Email to branch office or designated adjuster<br>
+                    <input type='checkbox' name='fnolMethod' value='Telephone'> Telephone<br>
+                    <input type='checkbox' name='fnolMethod' value='Web portal'> Web portal<br>
+                    <input type='checkbox' name='fnolMethod' value='Claim Alert Call Center'> Claim Alert Call Center<br>
+                    <input type='checkbox' name='fnolMethod' value='Internet'> Internet<br>
+                    <input type='checkbox' name='fnolMethod' value='XactAnalysis'> XactAnalysis<br>
+                    <input type='checkbox' name='fnolMethod' value='FNOL Online'> FNOL Online<br>
+                    <input type='checkbox' name='fnolMethod' value='CoreLogic'> CoreLogic<br>
+                    <input type='checkbox' name='fnolMethod' value='Other'> Other
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const questions = document.querySelectorAll('.question');
+        let current = 0;
+        questions[current].style.display = 'block';
+
+        questions.forEach((q, index) => {
+            const inputs = q.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.addEventListener('change', () => {
+                    if (index === 6 && input.value === 'No') {
+                        questions[7].style.display = 'none';
+                    } else if (index === 6 && input.value === 'Yes') {
+                        questions[7].style.display = 'block';
+                    }
+                    if (questions[index + 1]) {
+                        questions[index + 1].style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
